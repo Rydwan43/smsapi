@@ -42,7 +42,7 @@ namespace smsapi
 
         private string response()
         {
-            string url = @"http://sms-activate.ru/stubs/handler_api.php?api_key=e70A6Af1b93A9510f17c6bA2753ef545&action=getNumber&service=" + "\"ig\"" + "&forward=$forward&operator=any&ref=$ref&country=0";
+            string url = @"http://sms-activate.ru/stubs/handler_api.php?api_key=YourApiKey&action=getNumber&service=" + "\"ig\"" + "&forward=$forward&operator=any&ref=$ref&country=0";
             string html = string.Empty;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
@@ -61,7 +61,7 @@ namespace smsapi
 
         private async Task getSmsAsync()
         {
-            string url = @"https://sms-online.pro/stubs/handler_api.php?api_key=SOERMGIAZDP1HD03CCLWHDO7QFMCFL5NEMH8USPZ8JXUKUSKN6MTG5NF5TKX&action=getNumber&service=ig&ref=$ref&country=2";
+            string url = @"https://sms-online.pro/stubs/handler_api.php?api_key=YOURAPIKEY&action=getNumber&service=ig&ref=$ref&country=2";
             string html = string.Empty;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
@@ -88,7 +88,7 @@ namespace smsapi
         {
             var values = new Dictionary<string, string>
             {
-               { "api_key", "e70A6Af1b93A9510f17c6bA2753ef545" },
+               { "api_key", "YOURAPIKEY" },
                { "action", "getNumber" },
                { "service", "ig" },
                { "forward", "0" },
